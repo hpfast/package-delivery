@@ -8,16 +8,28 @@ It simulates a postage hub sending packages to final destinations. At the beginn
 It's based quite heavily on Abdulfattah Popoola's [blog post](http://abdulapopoola.com/2014/11/29/3-ways-to-start-using-promises/).
 
 
-##Usage
+Usage
+-----
 
-install:
+install standalone:
 
-    npm install package-delivery
+    git clone https://github.com/hpfast/package-delivery
+    cd package-delivery
+
+install dependencies:
+
+    npm install
 
 run:
+
 
     node .
 
 or
+
     node index.js
 
+
+install in your project (why would you do that?):
+
+    npm install package-delivery

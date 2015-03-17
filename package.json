@@ -1,6 +1,6 @@
 {
   "name": "package-delivery",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A demonstration of using promises with RSVP",
   "main": "index.js",
   "scripts": {
