@@ -1,11 +1,14 @@
 {
   "name": "package-delivery",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A demonstration of using promises with RSVP",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Hans Fast",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "rsvp": "^3.0.17"
+  }
 }
