@@ -39,7 +39,7 @@ var deliverPackages = function() {
    var trips = [];
    var packages = getRandomInt(1,10); //don't know how many packages we need to deliver
    for (var i=0; i<packages;i++){
-        var distance = getRandomInt(100,5000) //don't know how far away they are
+        var distance = getRandomInt(100,10000) //don't know how far away they are
         trips.push(new R.Promise(function(resolve, reject) {
            var package =  {id:i+1,distance:distance};
            var courier_speed = getRandomInt(1,10); //each package delivered by a different courier with different speed
@@ -50,18 +50,18 @@ var deliverPackages = function() {
    console.log('total trips to do: '+trips.length);
     //when all trips completed, log their full data including speed and duration.
     R.all(trips)
-        .then(fullReport)
-        .then(function(value){
-            //could do anything here that requires fullReport to be completed
-            console.log(value);
-            return('all done');
-        })
-        .then(function(value){
-            //and can be very 'functional' by returning values from our chained functions,
-            //returning computations as we pass things down the line.
-            console.log(value)
-            closingTime.resolve('that was fun');
-        });
+    .then(fullReport)
+    .then(function(value){
+        //could do anything here that requires fullReport to be completed
+        console.log(value);
+        return('all done');
+    })
+    .then(function(value){
+        //and can be very 'functional' by returning values from our chained functions,
+        //returning computations as we pass things down the line.
+        console.log(value)
+        closingTime.resolve('Done for the day');
+    });
 
     //as each trip is completed log its duration.
     for (var i=0; i<packages;i++){

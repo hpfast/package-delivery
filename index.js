@@ -1,5 +1,4 @@
 /*Run the Package Delivery Demo*/
-var R = require('rsvp');
 var post = require('./package-delivery.js');
 
 //we attach a custom handler to wrapper. This will get called at some point in our code!
